@@ -19,7 +19,7 @@ struct RouterView: View {
                 if !loggedIn {
                     SignInView(loggedIn: $loggedIn)
                 } else {
-                    ContentView()
+                    ContentView(loggedIn: $loggedIn)
                 }
             }
             .padding(.horizontal, 10)

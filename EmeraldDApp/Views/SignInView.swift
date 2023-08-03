@@ -15,10 +15,11 @@ struct SignInView: View {
             HStack {
                 Text("Welcome to")
                     .font(.title)
+                    .foregroundStyle(Color.white)
                 
                 Text("Emerald DApp!")
                     .font(.title)
-                    .foregroundStyle(Color.green)
+                    .foregroundStyle(Color.defaultAccentColor)
             }
             .padding()
             

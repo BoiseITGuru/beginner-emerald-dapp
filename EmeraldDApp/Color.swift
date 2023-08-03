@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Color {
     static let defaultBackgroundColor = Color("defaultBackgroundColor")
-    static let defaultAccentColor = Color("defaultAccentColor")
     static let defaultTextColor = Color("defaultTextColor")
+    static let defaultAccentColor = Color("defaultAccentColor")
     static let secondaryAccentColor = Color("secondaryAccentColor")
 }

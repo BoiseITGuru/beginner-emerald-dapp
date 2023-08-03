@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var loggedIn: Bool
     @State var greetingDisplay = ""
     @State var inputText = ""
     
@@ -49,9 +50,14 @@ struct ContentView: View {
             
             ButtonView(title: "Change Greeting", action: {
                 print(inputText)
+                inputText = ""
             })
 
             Spacer()
+            
+            ButtonView(title: "Sign Out", action: {
+                loggedIn = false
+            })
         }
     }
 }

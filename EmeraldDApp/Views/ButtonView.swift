@@ -17,9 +17,10 @@ struct ButtonView: View {
         } label: {
             Text(title)
                 .font(.title2)
+                .foregroundStyle(Color.defaultTextColor)
         }
             .frame(maxWidth: .infinity, maxHeight: 40)
-            .background(Color.green)
+            .background(Color.defaultAccentColor)
             .cornerRadius(15)
             .buttonStyle(PlainButtonStyle())
     }
