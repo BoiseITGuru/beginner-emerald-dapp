@@ -11,7 +11,7 @@ import SwiftUI
 struct EmeraldDAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouterView()
         }
     }
 }
