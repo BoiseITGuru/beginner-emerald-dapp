@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
+import FCL
 
 struct SignInView: View {
-    @Binding var loggedIn: Bool
-    
     var body: some View {
         VStack {
             HStack {
@@ -29,7 +28,7 @@ struct SignInView: View {
                 .padding(.bottom, 100)
             
             ButtonView(title: "Sign In", action: {
-                loggedIn = true
+                fcl.openDiscovery()
             })
         }
     }

@@ -15,6 +15,8 @@
 		2B6514712A7B11050065EE9D /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6514702A7B11050065EE9D /* ButtonView.swift */; };
 		2B6514732A7B20A90065EE9D /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6514722A7B20A90065EE9D /* RouterView.swift */; };
 		2B6514752A7B33290065EE9D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6514742A7B33290065EE9D /* Color.swift */; };
+		2BEBF99E2A7C30E400ED6031 /* FCL in Frameworks */ = {isa = PBXBuildFile; productRef = 2BEBF99D2A7C30E400ED6031 /* FCL */; };
+		2BF4B9DC2A7C38AB00458AF8 /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4B9DB2A7C38AB00458AF8 /* FlowManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		2B6514702A7B11050065EE9D /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		2B6514722A7B20A90065EE9D /* RouterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		2B6514742A7B33290065EE9D /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2BF4B9DB2A7C38AB00458AF8 /* FlowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BEBF99E2A7C30E400ED6031 /* FCL in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,7 @@
 		2B0586DD2A69AA28006C1DB6 /* EmeraldDApp */ = {
 			isa = PBXGroup;
 			children = (
+				2BEBF99F2A7C37BB00ED6031 /* Flow */,
 				2B6514742A7B33290065EE9D /* Color.swift */,
 				2B0586DE2A69AA28006C1DB6 /* EmeraldDAppApp.swift */,
 				2B3E57FF2A7B07B1007C50DC /* Views */,
@@ -89,6 +94,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2BEBF99F2A7C37BB00ED6031 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				2BF4B9DB2A7C38AB00458AF8 /* FlowManager.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +118,9 @@
 			dependencies = (
 			);
 			name = EmeraldDApp;
+			packageProductDependencies = (
+				2BEBF99D2A7C30E400ED6031 /* FCL */,
+			);
 			productName = EmeraldDApp;
 			productReference = 2B0586DB2A69AA28006C1DB6 /* EmeraldDApp.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 2B0586D22A69AA27006C1DB6;
+			packageReferences = (
+				2BEBF99C2A7C30E300ED6031 /* XCRemoteSwiftPackageReference "fcl-swift" */,
+			);
 			productRefGroup = 2B0586DC2A69AA28006C1DB6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,6 +180,7 @@
 			files = (
 				2B3E57FE2A7B07A8007C50DC /* SignInView.swift in Sources */,
 				2B0586E12A69AA28006C1DB6 /* ContentView.swift in Sources */,
+				2BF4B9DC2A7C38AB00458AF8 /* FlowManager.swift in Sources */,
 				2B6514712A7B11050065EE9D /* ButtonView.swift in Sources */,
 				2B0586DF2A69AA28006C1DB6 /* EmeraldDAppApp.swift in Sources */,
 				2B6514732A7B20A90065EE9D /* RouterView.swift in Sources */,
@@ -383,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2BEBF99C2A7C30E300ED6031 /* XCRemoteSwiftPackageReference "fcl-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/outblock/fcl-swift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2BEBF99D2A7C30E400ED6031 /* FCL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BEBF99C2A7C30E300ED6031 /* XCRemoteSwiftPackageReference "fcl-swift" */;
+			productName = FCL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B0586D32A69AA27006C1DB6 /* Project object */;
 }

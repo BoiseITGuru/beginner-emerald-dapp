@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct EmeraldDAppApp: App {
+    
+    init() {
+        flowManager.setup()
+    }
+    
     var body: some Scene {
         WindowGroup {
             RouterView()

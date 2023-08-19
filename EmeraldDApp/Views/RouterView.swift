@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FCL
 
 struct RouterView: View {
     @State var loggedIn: Bool = false
@@ -17,12 +18,15 @@ struct RouterView: View {
             
             Group {
                 if !loggedIn {
-                    SignInView(loggedIn: $loggedIn)
+                    SignInView()
                 } else {
                     ContentView(loggedIn: $loggedIn)
                 }
             }
             .padding(.horizontal, 10)
+        }
+        .onReceive(fcl.$currentUser) { user in
+            self.loggedIn = (user != nil)
         }
     }
 }
